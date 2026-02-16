@@ -1,0 +1,93 @@
+/* กำหนดฟอนต์และพื้นหลัง */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* สีพื้นหลังเทาอ่อน สบายตา */
+    color: #333;
+}
+
+/* ส่วนหัวและเมนู */
+header {
+    background-color: #4A90E2; /* สีฟ้าสะอาดตา */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white; /* สีตัวอักษรขาว สะอาดตา */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ส่วนเนื้อหา */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 180px; /* ปรับขนาดความกว้างรูป */
+    height: auto; /* ให้ความสูงปรับอัตโนมัติ */
+    float: left; /* ให้รูปลอยไปทางซ้าย */
+    margin-right: 20px; /* เว้นระยะด้านขวา */
+    margin-bottom: 10px; /* เว้นระยะด้านล่าง */
+    border-radius: 10px; /* ทำขอบมน (50% จะเป็นวงกลม) */
+    border: 3px solid #4A90E2;
+}
+
+/* ป้องกันไม่ให้เนื้อหาด้านล่างไหลขึ้นมาปน */
+.content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* กล่องรวมรูปภาพงานอดิเรก */
+.hobby-gallery {
+    display: flex; /* เรียงรูปในแนวนอน */
+    flex-wrap: wrap; /* เกินหน้าจอให้ขึ้นบรรทัดใหม่ */
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    margin-bottom: 20px;
+}
+
+/* กล่องรูปแต่ละรายการ */
+.hobby-item {
+    width: 200px; /* ความกว้างของแต่ละรูป */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.hobby-item img {
+    width: 100%; /* รูปเต็มความกว้างกล่อง */
+    height: 150px; /* ความสูงเท่ากันทุกรูป */
+    object-fit: cover; /* ตัดขอบส่วนเกิน */
+    border-radius: 8px; /* ขอบมน */
+    border: 2px solid #ddd;
+}
+
+/* ส่วนท้ายเว็บไซต์ */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #f38b8b;
+    background-color: #834545;
+    margin-top: 30px;
+}
